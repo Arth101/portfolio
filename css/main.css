@@ -105,6 +105,11 @@ body {
   font-family: 'Lato', sans-serif;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
 .wrapper {
   display: flex;
   min-height: 100vh;
@@ -168,9 +173,46 @@ main {
   text-transform: uppercase;
 }
 
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+}
 
+.card {
+  width: calc(25% - 12px);
+  margin: 6px;
+  background-color: seagreen;
+  color: white;
+}
 
+.card .head {
+  padding: 10px;
+}
 
+.card h3 {
+  margin: 0;
+  font-weight: lighter;
+}
+
+.card .foot {
+  padding: 10px;
+}
+
+.card p {
+  margin: 0;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card .links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
 
 
 
