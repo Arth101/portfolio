@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -21,24 +22,17 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <div class="wrapper">
-          <header>
-            <img src="img/me.jpg" alt="anders-enghoej" />
-            <h2>Anders Enghøj</h2>
-            <p>Professional Web Developer</p>
-            <p>Copenhagen, Denmark</p>
-            <p>Currently working for:</p>
-            <p><a href="http://yacc.io/">Yacc.io</a></p>
-          </header>
+        <div class="wrapper" id="app">
           <main>
             <div class="hero">
+              <img src="img/me.jpg" alt="anders-enghoej" />
               <h1>Hello world, Anders here!</h1>
               <h2>I am a web developer and designer and I aim to create functional and beatiful stuff on the web.</h2>
             </div>
             <div class="container">
               <section>
                 <h1>This is what I do</h1>
-                <div class="flex">
+                <div class="skills">
                   <div class="skill">
                     <h3>Web Development</h3>
                     <p>I have been working creatively with coding, creating realistic projects while refining my development and programming skills to a professional level.</p>
@@ -53,29 +47,31 @@
                   </div>
                 </div>
               </section>
+
               <section>
                 <h1>This is what I have made</h1>
                 <div class="cards">
-                  <div class="card">
-                    <div class="head">
-                      <h3>Harvikampfly.dk</h3>
-                      <p>Spare time project</p>
-                    </div>
-                    <img src="img/kampfly.jpg" />
-                    <div class="foot">
-                      <p>Have you ever wondered wheter the danish government has made a descision upon which fighterjet we should acquire? Probably not...</p>
+                  <!-- Project Card -->
+                  <div class="card" v-for="project in projects">
+                    <img :src="'img/' + project.image" />
+                    <div class="card-content">
+                      <div class="head">
+                        <h3>{{ project.title }}</h3>
+                        <p>{{ project.subtitle }}
+                      </div>
                       <div class="links">
-                        <a href="http://harvikampfly.dk/"><i class="fa fa-external-link-square" aria-hidden="true"></i> Website</a>
-                        <a href="https://github.com/Arth101/harvikampfly.dk"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
+                        <a :href="project.url"><i class="fa fa-external-link-square" aria-hidden="true"></i> Website</a>
+                        <a :href="project.github"><i class="fa fa-github" aria-hidden="true"></i> Github</a>
                       </div>
                     </div>
                   </div>
+                  <!-- Project Card End -->
                 </div>
               </section>
             </div>
           </main>
         </div>
 
-        <script src="js/main.js"></script>
+        <script src="js/projects.js"></script>
     </body>
 </html>
