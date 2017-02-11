@@ -110,6 +110,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: darkseagreen;
+}
+
 main {
   flex: 1 1 auto;
 }
@@ -118,6 +122,10 @@ main {
   main {
     margin-left: auto;
   }
+}
+
+section {
+  margin: 50px 0;
 }
 
 .hero {
@@ -132,15 +140,36 @@ main {
   text-align: center;
 }
 
+@media(max-width: 600px) {
+  .hero {
+    background: linear-gradient(rgba(30, 165, 5, 0.29), rgb(0, 0, 0)), url(/img/github.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    justify-content: flex-end;
+  }
+}
+
 .hero img {
   max-width: 130px;
   border-radius: 4px;
+}
+
+@media(max-width: 600px) {
+  .hero img {
+    display: none;
+  }
 }
 
 .hero h2 {
   margin-top: 0;
   max-width: 600px;
   font-weight: normal;
+}
+
+.hero .fa {
+  font-size: 2.5em;
+  padding: 10px;
 }
 
 .container {
@@ -156,6 +185,7 @@ main {
 
 .skills {
   display: flex;
+  flex-wrap: wrap;
 }
 
 @media(max-width: 600px) {
@@ -163,16 +193,17 @@ main {
     flex-direction: column;
   }
 }
-
-.skill {
+.skills .card {
   width: 100%;
-  padding: 0 15px;
-  margin: 0 5px;
-  transition: all .3s;
 }
 
-.skill h3 {
-  text-transform: uppercase;
+.skills .card .card-content {
+  padding: 20px;
+}
+
+.skills .card h3 {
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .cards {
@@ -225,13 +256,10 @@ main {
   color: darkseagreen;
 }
 
-
-
-
-
-
-
-
+footer {
+  text-align: center;
+  padding: 10px;
+}
 
 /* ==========================================================================
    Helper classes

@@ -3,13 +3,6 @@ var app = new Vue({
   data: {
     projects: [
       {
-        title: 'Harvikampfly.dk',
-        subtitle: 'Spare time project',
-        image: 'kampfly.jpg',
-        url: 'http://harvikampfly.dk/',
-        github: 'https://github.com/Arth101/harvikampfly.dk'
-      },
-      {
         title: 'The 2nd Edit',
         subtitle: 'Fashion Webshop',
         image: 'the2ndedit.jpg',
@@ -28,6 +21,27 @@ var app = new Vue({
         image: 'yacc.jpg',
         url: 'http://yacc.io/',
         github: 'https://github.com/hypesystem/maerkelex.dk'
+      },
+      {
+        title: 'etree.dk',
+        subtitle: 'Webshop for christmas trees',
+        image: 'etree.png',
+        url: 'https://etree.dk/',
+        github: 'https://github.com/hypesystem/etree2'
+      },
+      {
+        title: 'BFUI',
+        subtitle: 'UI Framework',
+        image: 'battlefield1.jpg',
+        url: 'https://arth101.github.io/BFUI/example/',
+        github: 'https://github.com/Arth101/BFUI'
+      },
+      {
+        title: 'Harvikampfly.dk',
+        subtitle: 'Spare time project',
+        image: 'kampfly.jpg',
+        url: 'http://harvikampfly.dk/',
+        github: 'https://github.com/Arth101/harvikampfly.dk'
       },
     ]
   }
