@@ -142,7 +142,7 @@ section {
 
 @media(max-width: 600px) {
   .hero {
-    background: linear-gradient(rgba(30, 165, 5, 0.29), rgb(0, 0, 0)), url(/img/github.jpg);
+    background: linear-gradient(rgba(30, 165, 5, 0.29), rgb(0, 0, 0)), url('../img/github.jpg');
     background-size: cover;
     background-position: center;
     height: 100vh;
