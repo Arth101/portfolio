@@ -12,9 +12,14 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <!-- Place favicon.ico in the root directory -->
 
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <!-- Async test -->
+        <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+        <!-- <link rel="stylesheet" href="css/main.css"> -->
+        <script src="js/cssrelpreload.js"></script>
+        <script src="js/loadCSS.js"></script>
+
+        <script src="https://unpkg.com/vue/dist/vue.js" defer></script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -92,7 +97,7 @@
           </main>
           <my-footer></my-footer>
         </div>
-        <script src="js/footer.js"></script>
-        <script src="js/projects.js"></script>
+        <script src="js/footer.js" defer></script>
+        <script src="js/projects.js" defer></script>
     </body>
 </html>
