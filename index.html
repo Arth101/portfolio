@@ -9,18 +9,43 @@
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
 
-        <!-- Async test -->
+        <!-- Async loading of styles -->
         <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
         <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'">
         <noscript>
           <link rel="stylesheet" href="css/main.css">
           <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         </noscript>
-        <!-- <link rel="stylesheet" href="css/main.css"> -->
-        <script src="js/cssrelpreload.js"></script>
-        <script src="js/loadCSS.js"></script>
-
+        <script src="js/cssrelpreload.js" defer></script>
+        <script src="js/loadCSS.js" defer></script>
         <script src="https://unpkg.com/vue/dist/vue.js" defer></script>
+
+        <!-- Most essential of styles -->
+        <style>
+          body {
+            font-family: sans-serif;
+            margin: 0;
+          }
+          .hero {
+            background-color: seagreen;
+            color: white;
+            min-height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+          .hero img {
+            max-width: 130px;
+            border-radius: 4px;
+          }
+          .container {
+            padding: 10px 20px;
+            max-width: 760px;
+            margin: 0 auto;
+          }
+        </style>
     </head>
     <body>
         <!--[if lt IE 8]>
