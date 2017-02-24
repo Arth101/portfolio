@@ -8,12 +8,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-        <!-- Place favicon.ico in the root directory -->
 
         <!-- Async test -->
         <link rel="preload" href="css/main.css" as="style" onload="this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="css/main.css"></noscript>
+        <link rel="preload" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" as="style" onload="this.rel='stylesheet'">
+        <noscript>
+          <link rel="stylesheet" href="css/main.css">
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        </noscript>
         <!-- <link rel="stylesheet" href="css/main.css"> -->
         <script src="js/cssrelpreload.js"></script>
         <script src="js/loadCSS.js"></script>
