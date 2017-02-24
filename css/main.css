@@ -141,13 +141,17 @@ section {
   justify-content: center;
   align-items: center;
   text-align: center;
+
+  background: -webkit-linear-gradient(rgba(30, 165, 5, 0.29), rgb(0, 0, 0)), url(../img/hero.jpg);
+  background: linear-gradient(rgba(30, 165, 5, 0.4), rgb(0, 0, 0)), url(../img/hero.jpg);
+  background-size: cover;
+  background-position: 35% 30%;
 }
 
 @media(max-width: 600px) {
   .hero {
-    background: -webkit-linear-gradient(rgba(30, 165, 5, 0.29), rgb(0, 0, 0)), url('../img/github.jpg');
-    background: linear-gradient(rgba(30, 165, 5, 0.29), rgb(0, 0, 0)), url('../img/github.jpg');
-    background-size: cover;
+    background: -webkit-linear-gradient(rgba(30, 165, 5, 0.29), rgb(0, 0, 0)), url('../img/mobile-hero.jpg');
+    background: linear-gradient(rgba(30, 165, 5, 0.29), rgb(0, 0, 0)), url('../img/mobile-hero.jpg');
     background-position: center;
     height: 100vh;
     justify-content: flex-end;
@@ -210,6 +214,11 @@ section {
   margin-bottom: 5px;
 }
 
+.skills .card .devicons {
+  font-size: 2em;
+  margin-top: 10px;
+}
+
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -230,7 +239,7 @@ section {
 
 .card h3 {
   margin: 0;
-  font-weight: lighter;
+  font-weight: normal;
 }
 
 .card .card-content {
