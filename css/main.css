@@ -131,11 +131,15 @@ section {
   margin: 50px 0;
 }
 
+section h1 {
+    font-weight: 100;
+}
+
 .hero {
   background-color: seagreen;
   color: white;
   min-height: 350px;
-  padding: 10px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
